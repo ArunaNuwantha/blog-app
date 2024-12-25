@@ -9,7 +9,7 @@ interface CommentProps {
 
 const CommentItem = ({ comment }: CommentProps) => {
   return (
-    <Card sx={{ minWidth: 300, height: 100 }}>
+    <Card sx={{ minWidth: 300 }}>
       <CardContent>
         <Typography sx={{ mb: 1.5 }}>{comment.email}</Typography>
         <Typography
