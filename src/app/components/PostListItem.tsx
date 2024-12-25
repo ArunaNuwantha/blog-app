@@ -13,8 +13,13 @@ const PostListItem = ({ post }: PostListItemProps) => {
     <Link href={`/posts/${post.id}`}>
       <Card sx={{ minWidth: 300, height: 100 }}>
         <CardContent>
-          <Typography sx={{ mb: 1.5 }}>{post.title}</Typography>
-          <Typography variant="body2">
+          <Typography variant="subtitle1" component="div">
+            {post.title}
+          </Typography>
+          <Typography
+            gutterBottom
+            sx={{ color: "text.secondary", fontSize: 14 }}
+          >
             {`${post.body.substring(0, 50)}...`}
           </Typography>
         </CardContent>

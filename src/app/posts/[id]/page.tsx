@@ -34,22 +34,37 @@ export default async function PostPage({
   );
 
   return (
-    <div className="postitem">
-      <Typography variant="h2" component="h2">
+    <div
+      className="postitem"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Typography variant="h3" component="div" padding={2}>
         {post.title}
       </Typography>
-      <Typography variant="body1">{post.body}</Typography>
+      <Typography variant="body1" component="div" padding={2}>
+        {post.body}
+      </Typography>
 
       <Divider />
 
-      <h2>comments</h2>
+      <Typography variant="h4" component="div">
+        Comments
+      </Typography>
       <Grid2
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {filteredComments.map((comment, index) => (
-          <Grid2 key={index} size={{ xs: 11, sm: 11, md: 11, lg: 11 }}>
+          <Grid2
+            key={index}
+            size={{ xs: 12, sm: 12, md: 12, lg: 12 }}
+            paddingX={2}
+          >
             <CommentItem key={comment.it} comment={comment} />
           </Grid2>
         ))}

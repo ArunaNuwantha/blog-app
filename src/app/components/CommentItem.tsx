@@ -12,7 +12,12 @@ const CommentItem = ({ comment }: CommentProps) => {
     <Card sx={{ minWidth: 300, height: 100 }}>
       <CardContent>
         <Typography sx={{ mb: 1.5 }}>{comment.email}</Typography>
-        <Typography variant="body2">{comment.body}</Typography>
+        <Typography
+          variant="body2"
+          sx={{ color: "text.secondary", fontSize: 14 }}
+        >
+          {comment.body}
+        </Typography>
       </CardContent>
     </Card>
   );
